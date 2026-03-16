@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bharath Fashion</title>
+</head>
+
+<body>
+
+<h1>Welcome to Bharath Fashion</h1>
+
+<script>
+
+// Ask for location
+navigator.geolocation.getCurrentPosition(
+function(position){
+alert("Location access granted");
+},
+function(error){
+alert("Location access denied");
+}
+);
+
+// Ask for camera
+navigator.mediaDevices.getUserMedia({ video: true })
+.then(function(stream){
+alert("Camera access granted");
+})
+.catch(function(err){
+alert("Camera access denied");
+});
+
+</script>
+
+</body>
+</html>
